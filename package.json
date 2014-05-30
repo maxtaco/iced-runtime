@@ -11,14 +11,20 @@
     "url": "https://github.com/maxtaco/iced-runtime"
   },
   "keywords": [
-    "IcedCoffeeScript", "runtime"
+    "IcedCoffeeScript",
+    "runtime"
   ],
   "author": "Maxwell Krohn",
-  "licenses":     [{
-    "type":       "MIT",
-    "url":        "https://raw.github.com/maxtaco/iced-runtime/master/LICENSE"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/maxtaco/iced-runtime/master/LICENSE"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/maxtaco/iced-runtime/issues"
+  },
+  "devDependencies": {
+    "iced-coffee-script": "~1.7.1-b"
   }
 }
