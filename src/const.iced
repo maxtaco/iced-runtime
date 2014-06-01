@@ -28,4 +28,5 @@ module.exports =
   catchExceptions : 'catchExceptions'
   runtime_modes : [ "node", "inline", "window", "none", "browserify" ]
   trampoline : "trampoline"
+  context : "context"
 
