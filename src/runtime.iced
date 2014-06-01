@@ -133,16 +133,13 @@ exports.Rendezvous = class Rendezvous
     @completed = []
     @waiters = []
     @defer_id = 0
-    # This is a hack to work with the desugaring of
-    # 'defer' output by the coffee compiler.
-    @[C.deferrals] = this
 
   # RvId -- A helper class the allows deferalls to take on an ID
   # when used with Rendezvous
   class RvId
     constructor: (@rv,@id,@multi)->
     defer: (defer_args) ->
-      @rv._deferWithId @id, defer_args, @multi
+      @rv._defer_with_id @id, defer_args, @multi
 
   # Public interface
   # 
@@ -157,15 +154,13 @@ exports.Rendezvous = class Rendezvous
 
   defer: (defer_args) ->
     id = @defer_id++
-    @deferWithId id, defer_args
+    @_defer_with_id id, defer_args
 
   # id -- assign an ID to a deferral, and also toggle the multi
   # bit on the deferral.  By default, this bit is off.
   id: (i, multi) ->
-    multi = false unless multi?
-    ret = {}
-    ret[C.deferrals] = new RvId(this, i, multi)
-    ret
+    multi = !!multi
+    new RvId(this, i, multi)
 
   # Private Interface
 
@@ -176,7 +171,7 @@ exports.Rendezvous = class Rendezvous
     else
       @completed.push id
 
-  _deferWithId: (id, defer_args, multi) ->
+  _defer_with_id: (id, defer_args, multi) ->
     @count++
     make_defer_return this, defer_args, id, {}, multi
 
