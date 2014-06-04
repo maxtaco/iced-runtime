@@ -1,5 +1,10 @@
+## 0.0.2 (2014-06-04)
 
-## 0.0.1 (2015-06-03)
+Features:
+
+  - Add an `interp` runtime mode...
+
+## 0.0.1 (2014-06-03)
 
 Features
  
