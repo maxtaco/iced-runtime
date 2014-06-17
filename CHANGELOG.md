@@ -1,3 +1,9 @@
+## 1.0.0 (2014-06-16)
+
+Features:
+
+  - Make a major release, since this API is now stable. No other changes.
+
 ## 0.0.2 (2014-06-04)
 
 Features:
