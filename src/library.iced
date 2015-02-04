@@ -81,7 +81,7 @@ exports.Pipeliner = class Pipeliner
     @delay = delay || 0
     @queue = []
     @n_out = 0
-    @cb = null
+    @cb = []
     
     # This is a hack to work with the desugaring of
     # 'defer' output by the coffee compiler. Same as in rendezvous
@@ -98,7 +98,7 @@ exports.Pipeliner = class Pipeliner
   
     # Wait until there is room in the window.
     while @n_out >= @window
-      await (@cb = defer())
+      await (@cb.push defer())
 
     # Lanuch a computation, so mark that there's one more
     # guy outstanding.
@@ -128,12 +128,12 @@ exports.Pipeliner = class Pipeliner
     # There is now one fewer outstanding computation.
     @n_out--
 
-    # If some is waiting in waitInQueue above, then now is the
-    # time to release him. Use "race-free" callback technique.
-    if @cb
-      tmp = @cb
-      @cb = null
-      tmp()
+    # If some are waiting in waitInQueue above, or in flush below,
+    # then now is the time to release them.
+    if @cb.length
+      while cb = @cb.shift()
+        cb()
+    return
 
   #-------------------------------
 
@@ -149,6 +149,6 @@ exports.Pipeliner = class Pipeliner
   # flush everything left in the pipe
   flush : (autocb) ->
     while @n_out
-      await (@cb = defer())
+      await (@cb.push defer())
 
 #===============================================================
