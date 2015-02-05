@@ -1,3 +1,9 @@
+## 1.0.3 (2015-02-05)
+
+Bugfix:
+  - Pipeliner fixed to allowe multiple threads of operation to
+    push on waiters.  Via PR2, thanks to @doublerebel.
+
 ## 1.0.2 (2014-09-29)
 
 Nit:

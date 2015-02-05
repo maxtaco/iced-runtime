@@ -25,6 +25,6 @@
     "url": "https://github.com/maxtaco/iced-runtime/issues"
   },
   "devDependencies": {
-    "iced-coffee-script": "~1.7.1-b"
+    "iced-coffee-script": "~1.8.0-c"
   }
 }

@@ -1,6 +1,6 @@
 
 C = require('./const')
-exports.iced = iced = require('./runtime')
+iced = require('./runtime')
 
 #===============================================================
 
@@ -79,9 +79,8 @@ exports.Pipeliner = class Pipeliner
   constructor : (window, delay) ->
     @window = window || 1
     @delay = delay || 0
-    @queue = []
     @n_out = 0
-    @cb = []
+    @cbs = []
     
     # This is a hack to work with the desugaring of
     # 'defer' output by the coffee compiler. Same as in rendezvous
@@ -98,7 +97,7 @@ exports.Pipeliner = class Pipeliner
   
     # Wait until there is room in the window.
     while @n_out >= @window
-      await (@cb.push defer())
+      await (@cbs.push defer())
 
     # Lanuch a computation, so mark that there's one more
     # guy outstanding.
@@ -130,8 +129,8 @@ exports.Pipeliner = class Pipeliner
 
     # If some are waiting in waitInQueue above, or in flush below,
     # then now is the time to release them.
-    if @cb.length
-      while cb = @cb.shift()
+    if @cbs.length
+      while cb = @cbs.shift()
         cb()
     return
 
@@ -149,6 +148,6 @@ exports.Pipeliner = class Pipeliner
   # flush everything left in the pipe
   flush : (autocb) ->
     while @n_out
-      await (@cb.push defer())
+      await (@cbs.push defer())
 
 #===============================================================
