@@ -1,3 +1,8 @@
+## 1.0.3 (2015-09-03)
+
+Bugfix:
+  - process?.nextTick? for react-native (via @chrisnojima!)
+
 ## 1.0.2 (2014-09-29)
 
 Nit:
