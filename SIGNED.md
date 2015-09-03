@@ -1,15 +1,15 @@
 ##### Signed by https://keybase.io/max
 ```
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2
+Comment: GPGTools - https://gpgtools.org
 
-iQEcBAABAgAGBQJUKUs5AAoJEJgKPw0B/gTfSdMH/RdyJdoqnVprr6MCBzgmJM8Y
-rg0WyDtlBxrIHWUahwaJKETnpj6xFGFnblBgcuXT6Ssw0XNuLs6pUFE1l3NBsPO4
-HmV94pDqXl3IpCKp1AvsPNheZ0EHgq71gNFV2YBxbuT83rsm1Ii22S19+fL2w0t+
-kiHj7D1I7c5W0p1Nc0RPGb1c7XTYgbFRIADYi99yP1SZKJlcNrOMPGiMZ3tp/8tK
-7qtsqlIWlkSvH21sxghJkMQ89J5U8DxIik7uTYKJ+uAIokz6bBn/hfAfem1pFBRL
-bsNM9MtwobK9qVct3GPEzIhtSFBjLoM6Emk5Grd6sH0YOF8AWF/SKX/PU1Wor2E=
-=kF1G
+iQEcBAABCgAGBQJV6KheAAoJEJgKPw0B/gTffKwIAJIxtmTLHYx1YIQmYWov/GMh
+1/wZibKaCcIXRkwoK04pO0QXI0t8RKUoKCqXx+DiSGvsJtiv+13g53gcYqIEDVQE
+qXkzMsRku1aNmmyx/JAOSG3R+R+8IZ8U8/H2MYJixOttPhY0MvmYa0wQxCv6DhqY
+0tNaSV95EU/nmAg1SdzL7zEplOw6iaqKbail81OOZv4Gul8tPzwopvQExfEvVpUe
+dPAWchDNmABoXVVhacWAMdI9fom9rInBsi4RrRDZs7xW+oAAU1AZlZgNW+xm97KN
+GHBKQXyWaW2xJDKd55NwlXH96WY9y8owK8PV3yC+0KWIaCaFE4cYAN11Q6WUfd8=
+=BWRn
 -----END PGP SIGNATURE-----
 
 ```
@@ -24,21 +24,21 @@ bsNM9MtwobK9qVct3GPEzIhtSFBjLoM6Emk5Grd6sH0YOF8AWF/SKX/PU1Wor2E=
 size  exec  file              contents                                                        
             ./                                                                                
 547           .gitignore      a3260451040bdf523be635eac16d28044d0064c4e8c4c444b0a49b9258851bec
-469           CHANGELOG.md    9b0855fc2d72965a423495efd01bcce47954281f911f85ae723a60ab6dc6a7bf
-1062          LICENSE         f5f4ff3d4bd2239d1cc4c9457ccee03a7e1fb1a6298a0b13ff002bee369bf043
+561           CHANGELOG.md    e8de680f70101f08d6aaa6bc45bd7a82181b597d169928ec67c18c8cba1f2d10
+1064          LICENSE         5fc49347113b5f450ac211e6ea946a21129f477161427226effa3cc185bcdc42
 407           Makefile        32e05964b75b43fd5492411f781568a8e8ea25f1ec9c12ddc795868549d231f6
 56            README.md       0bd4207a9490a68de9a1b58feac0cdeff349eaa778c8a0eaf859d07873026b07
               lib/                                                                            
-948             const.js      4f5863bd6285c4e14639131ee041466f6a6b9c778eb4674d0646486eff65788a
-8917            library.js    37ab82fb064111b42497ad8c93d3aef595fc9883cb61a4a1d424ff7ae5cb5447
-348             main.js       f29a1669ebc50cbda9dec9685acfb4af2248f48b997d823b43bb28671ba8b6f4
-5454            runtime.js    5d521040b0f9acb61a99842f8ad75973ba7c1799adbe9da85df3a8adf8d60982
-621           package.json    28b0d351e91b94035a5b63c2b051ec6541ef6b41d0302d8d5ef30cd629c3d2bd
+948             const.js      850bed76dca7bb0582128f7bd03695995bed6185e2aed1ebe8f2a12e7c5b97c5
+8519            library.js    04e38a2a3214344cc14ffff7010701bd696337c4bc95da5e777bd5a4ffa59963
+348             main.js       e83de18f49590d8c989a30ee357a143601c741c49390836792cab3492137f957
+5492            runtime.js    eace611e01fbf7d98d7bad0950be6507efe9af3023f8470aa94f9d6f887148bb
+621           package.json    43114ae107235b3ac4a72fbbef267699b96f080ae6798f6a119fd831e4ebba54
               src/                                                                            
-815             const.iced    e8b6ad6483b983c28e2ac82c8f4f5458a13ec4d38e2eec21d7bea6dbf1108fad
-3881            library.iced  2acf49cd6eceae202a162af11b98b4faf5cd2bcee186cad669b59a2d22643dda
-142             main.iced     bb74f97e5473e7f9b5f79264f3a3ba7126a4849d97fd37c49dfdbb711120e314
-5273            runtime.iced  2c45cb02f7fc17352605103720b0cace4d0c42e9f81a9bb99112ff83fb663fe6
+813             const.iced    47a264e483175c3af4900823978f619b3a80edb7d64f8ca42ff2b4d834c5efb2
+3844            library.iced  6f23a3bbbdb928866f689c4217e8e32ba1929c51bfea20f2aa64b29585f07215
+143             main.iced     9e316fde9ab21b2f7b9c78ed196e7c9d54e3c7cd20c1276bb470e21549dcd240
+5255            runtime.iced  bc396ba23a0f76a3e054a62fd35790b4c2188ab09c53b0cb8930bf2c957a180c
 ```
 
 #### Ignore
