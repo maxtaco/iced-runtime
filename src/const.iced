@@ -1,5 +1,5 @@
 
-module.exports = 
+module.exports =
   k : "__iced_k"
   k_noop : "__iced_k_noop"
   param : "__iced_p_"
