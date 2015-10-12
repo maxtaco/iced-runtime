@@ -82,6 +82,7 @@ exports.Deferrals = class Deferrals
   constructor: (@iterator, @trace) ->
     @count = 0
     @ret = null
+    @yielded = false
 
   #----------
 
@@ -90,7 +91,8 @@ exports.Deferrals = class Deferrals
       __active_trace = trace
       i = @iterator
       @iterator = null
-      i.next(@ret)
+      if @yielded
+        i.next(@ret)
     else
       warn "Entered dead await at #{_trace_to_string trace}"
 
@@ -106,6 +108,7 @@ exports.Deferrals = class Deferrals
       @iterator = null
       return false
     else
+      @yielded = true
       return true
 
   #----------
@@ -142,7 +145,7 @@ exports.Rendezvous = class Rendezvous
   # RvId -- A helper class the allows deferalls to take on an ID
   # when used with Rendezvous
   class RvId
-    constructor: (@rv,@id,@multi)->
+    constructor: (@rv,@id,@multi) ->
     defer: (defer_args) ->
       @rv._defer_with_id @id, defer_args, @multi
 
