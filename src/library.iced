@@ -147,8 +147,9 @@ exports.Pipeliner = class Pipeliner
     tmp[0]
 
   # flush everything left in the pipe
-  flush : (autocb) ->
+  flush : (cb) ->
     while @n_out
       await (@cb = defer())
+    cb()
 
 #===============================================================
