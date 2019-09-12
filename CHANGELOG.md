@@ -1,3 +1,7 @@
+## 1.0.4 (2019-09-12)
+
+  - cleanup tickers in timeout in the case that we don't timeout
+
 ## 1.0.3 (2015-09-03)
 
 Bugfix:
