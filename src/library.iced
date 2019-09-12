@@ -19,9 +19,10 @@ exports.iced = iced = require('./runtime')
 _timeout = (cb, t, res, tmp) ->
   rv = new iced.Rendezvous
   tmp[0] = rv.id(true).defer(arr...)
-  setTimeout rv.id(false).defer(), t
+  timeout_obj = setTimeout rv.id(false).defer(), t
   await rv.wait defer which
   res[0] = which if res
+  if which then clearTimeout timeout_obj
   cb.apply(null, arr)
 
 exports.timeout = (cb, t, res) ->
