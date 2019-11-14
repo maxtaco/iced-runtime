@@ -3,7 +3,7 @@ module.exports =
   k : "__iced_k"
   k_noop : "__iced_k_noop"
   param : "__iced_p_"
-  ns: "iced"
+  ns: "__iced"
   runtime : "runtime"
   Deferrals : "Deferrals"
   deferrals : "__iced_deferrals"
